@@ -472,7 +472,7 @@ form button:hover {
 
 @media screen and (min-height: 640px){
     #home, .section-sobre, .section-projetos {
-        height: 100vh; /* Cada seção continua ocupando a altura total da tela */
+        height: 100dvh; /* Cada seção continua ocupando a altura total da tela */
         overflow: hidden; /* Previne que conteúdo extravase */
     }
     .txt-sobre{
