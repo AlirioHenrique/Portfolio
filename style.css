@@ -470,3 +470,30 @@ form button:hover {
     }
 }
 
+@media screen and (min-height: 640px){
+    #home, .section-sobre, .section-projetos {
+        height: 100vh; /* Cada seção continua ocupando a altura total da tela */
+        overflow: hidden; /* Previne que conteúdo extravase */
+    }
+    .txt-sobre{
+        width: 100vw;
+        
+    }
+    .img-sobre {
+        max-height: 10vh; /* Limita a altura da imagem na seção "sobre" */
+        object-fit: contain; /* Garante que a imagem se ajuste sem deformar */
+    }
+    .section-sobre img {
+        width: 15vw; 
+        height: auto; 
+    }
+
+    .txt-sobre {
+        padding-top: 15%; /* Reduz o espaço superior para ajustar melhor */
+        font-size: 0.7rem; /* Ajusta o tamanho do texto para caber */
+    }
+
+    .section-projetos {
+        padding-top: 2rem; /* Garante que o conteúdo não invada a seção */
+    }
+}
