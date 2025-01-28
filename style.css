@@ -1,0 +1,466 @@
+body, html {
+    overflow: hidden;
+    background-color: #2c202c;
+}
+.button-menu{
+    display: none;
+}
+section {
+    min-height: 100vh; 
+    padding: 20px;
+}
+#home {
+    height: 40vh;
+    position: relative;
+    background-color: #2c202c; /* Cor de fundo */   
+}
+.custom-navbar {
+    background-color: #2a2e33; 
+    padding: 1rem 1rem; 
+    height: 5ch;
+}
+.custom-navbar .nome-titulo {
+    font-family: 'Raleway', sans-serif; 
+    font-size: 2rem;
+    color: #f4e6cc; 
+    font-weight: 700;
+    text-decoration: none; 
+    justify-content: center; 
+    align-items: center; 
+}
+.custom-navbar .navbar-toggler {
+    border: none; 
+    background: transparent; 
+}
+.custom-navbar .navbar-nav .nav-item .nav-link {
+    color: #f4e6cc; 
+    font-weight: 500;
+    text-transform: uppercase; 
+    padding: 10px 15px;
+}
+.custom-navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #f4e6cc; 
+    background-color: #34495e;
+    border-radius: 5px; 
+}
+.custom-navbar .navbar-collapse {
+    text-align: right;
+}
+.custom-navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.nome-titulo {
+    position: absolute;
+    left: 5%;
+    font-family: 'Raleway ', sans-serif; 
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    color: #f4e6cc; 
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5); 
+}
+
+/* Home*/
+.boas-vindas {
+    width: 40%; 
+    left: 5%;
+    top: 20%;
+    display: flex;
+    position: absolute;
+    text-align: left; 
+    color: #f4e6cc;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 3%;
+    background-color: rgba(44, 32, 44, 0.8);
+    border-radius: 10%; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); 
+} 
+.img-home{
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.img-home img {
+    object-fit: contain;
+    animation: fadeInScale 4s ease-out forwards; 
+    margin-top: -40vh; 
+    margin-left: 30%;
+    border-radius: 50%; 
+    box-shadow: 0px 40px 1px rgba(0, 0, 0, 0.9); 
+}
+@keyframes fadeInScale {
+    0% {
+        opacity: 0; 
+        transform: scale(0.5) rotate(7deg); 
+    }
+    100% {
+        opacity: 0.7; 
+        transform: scale(0.5) rotate(1deg);
+    }
+}
+.txt-home {
+    position: absolute;
+    top: 60%; 
+    left: 5%; 
+    width: 60%; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.5rem; 
+    font-weight: 500; 
+    color:  #d1b68d; 
+    line-height: 1.8; 
+    text-align: justify; 
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1); 
+}
+.typed-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2em;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}
+.multiple-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #f4e6cc;
+    vertical-align: middle; 
+    line-height: 1.5; 
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 255, 255, 0.2); 
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.container-Sociais {
+    position: absolute;
+    top: 85%; 
+    right: 5%;
+    display: flex;
+    justify-content: space-between; 
+    width: 30%;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1); 
+}
+.container-Sociais p {
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1rem; 
+    font-weight: 300; 
+    color: #f4e6cc; 
+    text-align: center; 
+    letter-spacing: 1px; 
+    padding-top: 2%;
+}
+.container-Sociais p::after {
+    content: '👉'; 
+    font-size: 1rem; 
+    margin-left: 10px; 
+}
+.social-logo {
+    width: 40px; 
+    height: 40px;  
+    transition: transform 0.3s ease; 
+    background-color: #d1b68d;
+    border-radius: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.social-logo:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    filter: brightness(1.2);
+}
+
+/*Sobre*/
+
+.section-sobre {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify; 
+    background-color: #3d4044;
+}
+.txt-sobre {
+    padding-top: 8%;
+    padding-left: 5%; 
+    max-width: 50vw; 
+    font-size: 1.1rem; 
+    line-height: 1.6;
+    color:#f2e8c6;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.section-sobre img {
+    width: 40vw; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+/*Projetos*/
+
+.section-projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #2c202c;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20%; 
+    justify-items: center; 
+    width: 100%;
+    max-width: 1200px; 
+}
+.card-cosmepedia-front {
+    background-color: #072847;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 25vh;
+    justify-content: center;
+    border-radius: 3%;
+}
+.card-cosmepedia-back {
+    background-color:#072847;
+    border-radius: 3%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 25vh;
+    justify-content: center;
+}
+.img-cosmepedia-back{
+    width: 100%;
+    height: 100%; 
+    border-radius: 30%; 
+    object-fit: contain; 
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card:hover .overlay {
+    opacity: 1;
+}
+.overlay h3 {
+    margin: 0 0 1rem 0; 
+    font-size: 1.25rem; 
+    font-weight: bold;
+}
+.project-description {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 0;
+    max-width: 100%;
+    color: #f2e8c6;
+}
+
+/*Contato*/
+
+.section-contato {
+    background-color: #3d4044; 
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3ch; 
+    width: 40%; 
+    padding: 1% 1%;
+    background-color:#d1b68d;
+    border-radius: 2%;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 1); 
+}
+form label {
+    font-weight: bold;
+    color:#f2e8c6;
+    font-size: 1rem;
+}
+form input, form textarea {
+    padding: 1%;
+    border: 5px solid #f2e8c6;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;  
+}
+form textarea {
+    resize: none; 
+}
+form button {
+    width: 20%;
+    background-color: #007BFF; 
+    color: #f2e8c6;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+form button:hover {
+    background-color: #0056b3; 
+}
+@media (max-width: 430px) and (max-height: 932px) {
+    #home {
+        height: 100vh; 
+        padding: 0; 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto; 
+    }
+    .button-menu {
+        display: flex;  
+        align-items: center;    
+        justify-content: center; 
+        font-size: 1rem;
+        line-height: 1.1;
+        color: #d1b68d;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 30%;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        cursor: pointer;
+        margin-left: auto;       
+        margin-right: 0;         
+        height: 100%;              
+    }
+    .button-menu:focus {
+        outline: none; 
+    } 
+    .button-menu:focus svg line {
+        stroke:  #f4e6cc;
+    }
+    .boas-vindas {
+        display: none;
+    } 
+    .img-home {
+        width: 100%; 
+        height: 95%; 
+        display: block;
+        position: relative; 
+    }
+    .img-home img {
+        width: 100%; 
+        margin: 0 auto; 
+        border-radius: 50%;
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.7); 
+    }
+    .txt-home {
+        font-size: 1rem;
+        color: #d1b68d;
+        font-weight: 400;
+        line-height: 1.4;
+        text-align: justify; 
+        padding: 0 10px; 
+        top: 50%; 
+    }
+    .custom-navbar {
+        padding: 0.5rem 1rem;
+        background-color: #2a2e33;
+        display: flex;
+        justify-content: center; 
+    }
+    .custom-navbar .nome-titulo {
+        font-size: 1.4rem;
+        color: #f4e6cc;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+    }
+    .custom-navbar .navbar-nav {
+        display: flex; 
+        justify-content: center; 
+        padding: 0; 
+        margin: 0; 
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link {
+        font-size: 1rem;
+        padding: 8px 12px;
+        color: #f4e6cc;
+        text-align: center;
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:hover {
+        color: #f4e6cc;
+        background-color: #34495e;
+        border-radius: 5px;
+    }
+    .container-Sociais {
+        width: 70%; 
+        position: absolute;
+        top: 90%; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        display: flex;
+        justify-content: center; 
+        gap: 5%;
+    }
+    .container-Sociais p {
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: #f4e6cc;
+        text-align: center;
+        margin-bottom: 2%; 
+    }
+    .social-logo {
+        width: 30px;
+        height: 30px;
+        background-color: #d1b68d;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .social-logo:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    }
+    .multiple-text {
+        font-size: 5vw; 
+    }
+    .section-sobre{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow-y: auto;
+        background-color: #3d4044;
+    }
+    .txt-sobre {
+        max-width: 90vw; 
+        font-size: 0.8rem; 
+        line-height: 1.4;
+        color:#f2e8c6;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 20%;
+    }
+    .img-sobre{
+        align-self: center;
+    }
+    .section-sobre img {
+        width: 40vw; 
+        height: auto; 
+    }
+}
