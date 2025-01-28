@@ -324,11 +324,10 @@ form button {
 form button:hover {
     background-color: #0056b3; 
 }
-@media (max-width: 540px) {
+@media screen and (max-width: 540px) {
     #home {
         height: 100vh; 
         padding: 0; 
-        position: relative;
         display: flex;
         flex-direction: column;
         overflow-y: auto; 
@@ -363,6 +362,7 @@ form button:hover {
         height: 95%; 
         display: block;
         position: relative; 
+        object-fit: contain;
     }
     .img-home img {
         width: 100%; 
@@ -464,4 +464,9 @@ form button:hover {
         width: 40vw; 
         height: auto; 
     }
+    .section-projetos {
+        min-height: 100vh;
+        overflow-y: auto; 
+    }
 }
+
