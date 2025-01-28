@@ -471,9 +471,15 @@ form button:hover {
 }
 
 @media screen and (min-height: 640px){
-    #home, .section-sobre, .section-projetos {
-        height: 100dvh; /* Cada seção continua ocupando a altura total da tela */
-        overflow: hidden; /* Previne que conteúdo extravase */
+    .section-sobre {
+        height: 100vh; /* Garante que a altura da seção seja 100% da tela */
+        display: flex; /* Flexbox para organizar os itens */
+        flex-direction: column; /* Alinha itens verticalmente */
+        justify-content: center; /* Centraliza verticalmente os elementos */
+        align-items: center; /* Centraliza horizontalmente os elementos */
+        padding: 0; /* Remove qualquer espaçamento interno */
+        margin: 0; /* Remove qualquer espaçamento externo */
+        overflow: hidden; /* Impede que elementos ultrapassem a seção */
     }
     .txt-sobre{
         width: 100vw;
