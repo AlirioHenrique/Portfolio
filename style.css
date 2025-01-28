@@ -330,7 +330,7 @@ form button:hover {
         padding: 0; 
         display: flex;
         flex-direction: column;
-        overflow-y: auto; 
+
     }
     .button-menu {
         display: flex;  
@@ -445,7 +445,7 @@ form button:hover {
         display: flex;
         flex-direction: column;
         height: 100vh;
-        overflow-y: auto;
+     
         background-color: #3d4044;
     }
     .txt-sobre {
@@ -466,7 +466,7 @@ form button:hover {
     }
     .section-projetos {
         min-height: 100vh;
-        overflow-y: auto; 
+      
     }
 }
 
