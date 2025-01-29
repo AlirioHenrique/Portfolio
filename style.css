@@ -325,15 +325,35 @@ form button:hover {
     background-color: #0056b3; 
 }
 @media screen and (max-width: 540px) {
-    body:has(.section-sobre, .section-projetos) {
-        background-color: #3d4044;
-    }
     #home {
         height: 100vh; 
         padding: 0; 
         display: flex;
         flex-direction: column;
-
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link {
+        font-size: 1rem;
+        color: #f4e6cc;
+        text-align: center;
+        border: none; /* Sem borda */
+        transition: none; /* Desativa a transição para foco e ativo */
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:active {
+        background-color: transparent; 
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:focus {
+        background-color: transparent; 
+        outline: none; 
+    }
+    #navbarNav.collapse {
+        transition: none; 
+    }
+    #navbarNav.show {
+        transition: none;
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:hover {
+        color: #d44e2c;
+        background-color: transparent; 
     }
     .button-menu {
         display: flex;  
@@ -469,7 +489,46 @@ form button:hover {
     }
     .section-projetos {
         min-height: 100vh;
-      
     }
 }
 
+@media screen and (max-height: 920px) {
+    .txt-sobre{
+        max-width: 90vw; 
+        line-height: 1.5;
+    }
+    .custom-navbar .nome-titulo {
+        font-size: 1.4rem;
+        color: #f4e6cc;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link {
+        font-size: 1rem;
+        color: #f4e6cc;
+        text-align: center;
+        border: none; /* Sem borda */
+        transition: none; /* Desativa a transição para foco e ativo */
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:active {
+        background-color: transparent; 
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:focus {
+        background-color: transparent; 
+        outline: none; 
+    }
+    #navbarNav.collapse {
+        transition: none; 
+    }
+    #navbarNav.show {
+        transition: none;
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:hover {
+        color: #d44e2c;
+        background-color: transparent; 
+    }
+    
+
+    
+}
