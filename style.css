@@ -325,6 +325,9 @@ form button:hover {
     background-color: #0056b3; 
 }
 @media screen and (max-width: 540px) {
+    body:has(.section-sobre, .section-projetos) {
+        background-color: #3d4044;
+    }
     #home {
         height: 100vh; 
         padding: 0; 
@@ -470,36 +473,3 @@ form button:hover {
     }
 }
 
-@media screen and (min-height: 640px){
-    .section-sobre {
-        height: 100vh; /* Garante que a altura da seção seja 100% da tela */
-        display: flex; /* Flexbox para organizar os itens */
-        flex-direction: column; /* Alinha itens verticalmente */
-        justify-content: center; /* Centraliza verticalmente os elementos */
-        align-items: center; /* Centraliza horizontalmente os elementos */
-        padding: 0; /* Remove qualquer espaçamento interno */
-        margin: 0; /* Remove qualquer espaçamento externo */
-        overflow: hidden; /* Impede que elementos ultrapassem a seção */
-    }
-    .txt-sobre{
-        width: 100vw;
-        
-    }
-    .img-sobre {
-        max-height: 10vh; /* Limita a altura da imagem na seção "sobre" */
-        object-fit: contain; /* Garante que a imagem se ajuste sem deformar */
-    }
-    .section-sobre img {
-        width: 15vw; 
-        height: auto; 
-    }
-
-    .txt-sobre {
-        padding-top: 15%; /* Reduz o espaço superior para ajustar melhor */
-        font-size: 0.7rem; /* Ajusta o tamanho do texto para caber */
-    }
-
-    .section-projetos {
-        padding-top: 2rem; /* Garante que o conteúdo não invada a seção */
-    }
-}
