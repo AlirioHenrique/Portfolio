@@ -14,6 +14,10 @@ section {
     position: relative;
     background-color: #2c202c; /* Cor de fundo */   
 }
+.custom-navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
 .custom-navbar {
     background-color: #2a2e33; 
     padding: 1rem 1rem; 
@@ -28,29 +32,25 @@ section {
     justify-content: center; 
     align-items: center; 
 }
-.custom-navbar .navbar-toggler {
-    border: none; 
-    background: transparent; 
+
+.custom-navbar .navbar-nav .nav-item .nav-link:active {
+    background-color: transparent; 
 }
-.custom-navbar .navbar-nav .nav-item .nav-link {
-    color: #f4e6cc; 
-    font-weight: 500;
-    text-transform: uppercase; 
-    padding: 10px 15px;
+.custom-navbar .navbar-nav .nav-item .nav-link:focus {
+    background-color: transparent; 
+    outline: none; 
+}
+#navbarNav.collapse {
+    transition: none; 
+}
+#navbarNav.show {
+    transition: none;
 }
 .custom-navbar .navbar-nav .nav-item .nav-link:hover {
-    color: #f4e6cc; 
-    background-color: #34495e;
-    border-radius: 5px; 
+    color: #d44e2c;
+    background-color: transparent; 
 }
-.custom-navbar .navbar-collapse {
-    text-align: right;
-}
-.custom-navbar .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
+
 .nome-titulo {
     position: absolute;
     left: 5%;
@@ -335,8 +335,7 @@ form button:hover {
         font-size: 1rem;
         color: #f4e6cc;
         text-align: center;
-        border: none; /* Sem borda */
-        transition: none; /* Desativa a transição para foco e ativo */
+
     }
     .custom-navbar .navbar-nav .nav-item .nav-link:active {
         background-color: transparent; 
@@ -492,10 +491,37 @@ form button:hover {
     }
 }
 
-@media screen and (max-height: 920px) {
+@media screen and (max-height: 740px)  {   
+    .img-home {
+        width: 80%; 
+        height: 100%; 
+    }
+    .txt-home {
+        font-size: 1rem;
+        color: #d1b68d;
+        font-weight: 400;
+        line-height: 1.4;
+        text-align: justify;  
+        top: 47%; 
+    }
+    .container-Sociais {
+        width: 70%; 
+        left: 60%; 
+    }
+    .container-Sociais p {
+        font-size: 0.6rem;
+        font-weight: 300;
+        color: #f4e6cc;
+        text-align: center;
+        margin-bottom: 2%; 
+    }  
+    .container-Sociais p::after {
+        font-size: 0.9rem; 
+    }
     .txt-sobre{
         max-width: 90vw; 
         line-height: 1.5;
+        
     }
     .custom-navbar .nome-titulo {
         font-size: 1.4rem;
@@ -530,5 +556,51 @@ form button:hover {
     }
     
 
+}
+@media screen and (max-height: 920px) {
+    
+    .custom-navbar .nome-titulo {
+        font-size: 1.4rem;
+        color: #f4e6cc;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link {
+        font-size: 1rem;
+        color: #f4e6cc;
+        text-align: center;
+        border: none; /* Sem borda */
+        transition: none; /* Desativa a transição para foco e ativo */
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:active {
+        background-color: transparent; 
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:focus {
+        background-color: transparent; 
+        outline: none; 
+    }
+    #navbarNav.collapse {
+        transition: none; 
+    }
+    #navbarNav.show {
+        transition: none;
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:hover {
+        color: #d44e2c;
+        background-color: transparent; 
+    }
+    .txt-home {
+        top: 40%; 
+    }
+    .container-Sociais{
+        top: 85%;
+    }
+    .txt-sobre{
+        max-width: 90vw; 
+        line-height: 1.5;
+        font-size: 0.77rem; 
+    }
     
 }
+
