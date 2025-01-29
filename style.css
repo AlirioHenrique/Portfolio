@@ -324,7 +324,9 @@ form button {
 form button:hover {
     background-color: #0056b3; 
 }
-@media screen and (max-width: 540px) {
+
+@media screen and (min-width: 320px) and (max-width: 480px) 
+                 and (min-height: 500px) and (max-height: 800px){
     #home {
         height: 100vh; 
         padding: 0; 
@@ -380,6 +382,7 @@ form button:hover {
         display: none;
     } 
     .img-home {
+        top: -8%;
         width: 100%; 
         height: 95%; 
         display: block;
@@ -399,7 +402,7 @@ form button:hover {
         line-height: 1.4;
         text-align: justify; 
         padding: 0 10px; 
-        top: 50%; 
+        top: 40%; 
     }
     .custom-navbar {
         padding: 0.5rem 1rem;
@@ -434,7 +437,7 @@ form button:hover {
     .container-Sociais {
         width: 70%; 
         position: absolute;
-        top: 90%; 
+        top: 85%; 
         left: 50%; 
         transform: translateX(-50%); 
         display: flex;
@@ -442,7 +445,7 @@ form button:hover {
         gap: 5%;
     }
     .container-Sociais p {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         font-weight: 300;
         color: #f4e6cc;
         text-align: center;
@@ -472,7 +475,7 @@ form button:hover {
     }
     .txt-sobre {
         max-width: 90vw; 
-        font-size: 0.8rem; 
+        font-size: 0.65rem; 
         line-height: 1.4;
         color:#f2e8c6;
         font-family: 'Poppins', sans-serif;
@@ -480,7 +483,8 @@ form button:hover {
     }
     .img-sobre{
         align-self: center;
-        object-fit: cover;
+        position: relative;
+        top: -10%;
     }
     .section-sobre img {
         width: 30vw; 
@@ -491,22 +495,100 @@ form button:hover {
     }
 }
 
-@media screen and (max-height: 740px)  {   
-    .img-home {
-        width: 80%; 
-        height: 100%; 
+@media screen and (min-width: 412px) and (max-width: 768px) 
+                 and (min-height: 801px) and (max-height: 1024px) {   
+    .custom-navbar .nome-titulo {
+        font-size: 1.4rem;
+        color: #f4e6cc;
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
     }
-    .txt-home {
+    .custom-navbar .navbar-nav {
+        display: flex;
+        justify-content: center; /* Centraliza os itens na barra */
+    }
+    
+    .custom-navbar .navbar-nav .nav-item .nav-link {
         font-size: 1rem;
-        color: #d1b68d;
-        font-weight: 400;
-        line-height: 1.4;
-        text-align: justify;  
-        top: 47%; 
+        color: #f4e6cc;
+        text-align: center;
+        border: none; /* Sem borda */
+        transition: none; /* Desativa a transição para foco e ativo */
+        display: block; /* Faz com que o link ocupe a largura total do item */
+        padding: 1rem 1rem;
     }
+    .custom-navbar .navbar-nav .nav-item .nav-link:active {
+        background-color: transparent; 
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:focus {
+        background-color: transparent; 
+        outline: none; 
+    }
+    #navbarNav.collapse {
+        transition: none; 
+    }
+    #navbarNav.show {
+        transition: none;
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link:hover {
+        color: #d44e2c;
+        background-color: transparent; 
+    } 
+    .button-menu {
+        display: flex;  
+        align-items: center;    
+        justify-content: center; 
+        font-size: 1rem;
+        line-height: 1.1;
+        color: #d1b68d;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 30%;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        cursor: pointer;
+        margin-left: auto;       
+        margin-right: 0;         
+        height: 100%;              
+    }
+    .button-menu:focus {
+        outline: none; 
+    } 
+    .button-menu:focus svg line {
+        stroke:  #f4e6cc;
+    }
+    .boas-vindas {
+        display: none;
+    }   
+    .img-home {
+        top: -5%;
+        width: 100%; 
+        height: 100%; 
+        display: block;
+        position: relative; 
+        object-fit: contain;
+    }
+    .img-home img {
+        width: 100%; 
+        margin: 0 auto; 
+        border-radius: 50%;
+        box-shadow: 0 20px 10px rgba(0, 0, 0, 0.7); 
+    }
+    .multiple-text {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #f4e6cc;
+        vertical-align: middle; 
+        line-height: 1.5; 
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 255, 255, 0.2); 
+        box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
+        font-size: 1.2rem;
+    }
+
     .container-Sociais {
-        width: 70%; 
-        left: 60%; 
+        width: 80%; 
+        left: 15%; 
     }
     .container-Sociais p {
         font-size: 0.6rem;
@@ -518,46 +600,40 @@ form button:hover {
     .container-Sociais p::after {
         font-size: 0.9rem; 
     }
-    .txt-sobre{
-        max-width: 90vw; 
-        line-height: 1.5;
-        
-    }
-    .custom-navbar .nome-titulo {
-        font-size: 1.4rem;
-        color: #f4e6cc;
-        text-align: center;
-        font-weight: 700;
-        margin: 0;
-    }
-    .custom-navbar .navbar-nav .nav-item .nav-link {
+    .txt-home {
         font-size: 1rem;
-        color: #f4e6cc;
-        text-align: center;
-        border: none; /* Sem borda */
-        transition: none; /* Desativa a transição para foco e ativo */
+        color: #d1b68d;
+        font-weight: 400;
+        line-height: 1.4;
+        text-align: justify; 
+        padding: 0 10px; 
+        top: 40%; 
+    } 
+
+    .section-sobre{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
     }
-    .custom-navbar .navbar-nav .nav-item .nav-link:active {
-        background-color: transparent; 
+    .txt-sobre {
+        max-width: 90vw; 
+        font-size: 0.7rem; 
+        line-height: 1.4;
+        padding-top: 20%;
     }
-    .custom-navbar .navbar-nav .nav-item .nav-link:focus {
-        background-color: transparent; 
-        outline: none; 
+    .img-sobre{
+        align-self: center;
+        position: relative;
+        top: -10%;
     }
-    #navbarNav.collapse {
-        transition: none; 
-    }
-    #navbarNav.show {
-        transition: none;
-    }
-    .custom-navbar .navbar-nav .nav-item .nav-link:hover {
-        color: #d44e2c;
-        background-color: transparent; 
-    }
-    
+    .section-sobre img {
+        width: 30vw; 
+        height: auto; 
+    } 
 
 }
-@media screen and (max-height: 920px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) 
+                 and (min-height: 1025px) and (max-height: 1366px)  {
     
     .custom-navbar .nome-titulo {
         font-size: 1.4rem;
@@ -590,17 +666,23 @@ form button:hover {
         color: #d44e2c;
         background-color: transparent; 
     }
-    .txt-home {
-        top: 40%; 
-    }
+   
+
     .container-Sociais{
         top: 85%;
     }
     .txt-sobre{
         max-width: 90vw; 
         line-height: 1.5;
-        font-size: 0.77rem; 
+        font-size: 0.6rem; 
     }
-    
+    .section-sobre img {
+        width: 30vw; 
+        top:20% ;
+    }
+    .section-sobre img {
+        position: relative;
+        top: -9%;
+    }
 }
 
