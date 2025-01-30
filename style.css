@@ -430,7 +430,7 @@ form button:hover {
     .container-Sociais {
         width: 80%; 
         position: absolute;
-        top: 85%; 
+        top: 80%; 
         left: 50%; 
         transform: translateX(-50%); 
         display: flex;
