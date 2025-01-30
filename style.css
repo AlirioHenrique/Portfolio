@@ -53,6 +53,10 @@ section {
 .custom-navbar .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
     display: block; /* Exibe o dropdown ao passar o mouse */
 }
+.custom-navbar .navbar-nav .nav-item .nav-link.active {
+    color: #d44e2c; /* Cor do link ativo */
+    font-weight: bold; /* Opcional */
+}
 
 .nome-titulo {
     position: absolute;
@@ -404,7 +408,7 @@ form button:hover {
         display: none;
     } 
     .img-home {
-        top: -6%;
+        top: -5%;
         width: 100%; 
         height: 95%; 
         display: block;
@@ -490,7 +494,53 @@ form button:hover {
 
 @media screen and (min-width: 412px) and (max-width: 768px) 
                  and (min-height: 801px) and (max-height: 1024px) {   
+    .nome-titulo {
+        position: absolute;
+        left: 5%;
+        font-family: 'Raleway ', sans-serif; 
+        font-size: 1.5rem; 
+        font-weight: 700; 
+        color: #f4e6cc; 
+        text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8); 
+    }
+    .custom-navbar {
+        height: auto; /* Ajuste para não forçar uma altura fixa */
+        max-height: 5ch; /* Limite a altura máxima, se necessário */
+    }
 
+    .custom-navbar .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .custom-navbar .navbar-nav .nav-item .nav-link {
+        font-size: 1rem;
+        color: #f4e6cc;
+        text-align: center;
+
+    }
+
+    .custom-navbar .navbar-nav .nav-item .nav-link:active,
+    .custom-navbar .navbar-nav .nav-item .nav-link:focus,
+    .custom-navbar .navbar-nav .nav-item .nav-link:hover {
+        background-color: transparent; 
+        outline: none;
+    }
+
+    .custom-navbar .navbar-nav .nav-item .nav-link:hover {
+        color: #d44e2c;
+    }
+
+    .custom-navbar .navbar-nav .nav-item.dropdown .dropdown-menu {
+        display: none; /* Oculta o dropdown por padrão */
+
+    }
+
+    .custom-navbar .navbar-nav .nav-item.dropdown:hover .dropdown-menu{
+        display: block; /* Exibe o dropdown ao passar o mouse */
+    }
     .button-menu {
         display: flex;  
         align-items: center;    
@@ -517,7 +567,7 @@ form button:hover {
         display: none;
     }   
     .img-home {
-        top: -5%;
+        top: -4%;
         width: 100%; 
         height: 100%; 
         display: block;

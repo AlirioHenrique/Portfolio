@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     type(); 
 });
+
 document.addEventListener("click", function (event) {
     const buttonMenu = document.querySelector(".button-menu");
     const menuContent = document.querySelector("#navbarNav");
@@ -49,3 +50,21 @@ const navbar = document.querySelector('.custom-navbar');
 const linkSobre = document.querySelector('.nav-link[href="#sobre"]'); 
 const navLinks = document.querySelectorAll('.nav-link'); 
 
+//ativar o link clicado
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+        localStorage.setItem('activeLink', this.getAttribute('href'));
+    });
+});
+// Verifica se há um link ativo salvo no localStorage
+window.addEventListener('load', function() {
+    const activeLink = localStorage.getItem('activeLink');
+    if (activeLink) {
+        const linkToActivate = document.querySelector(`a[href="${activeLink}"]`);
+        if (linkToActivate) {
+            linkToActivate.classList.add('active');
+        }
+    }
+});
