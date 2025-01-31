@@ -145,21 +145,27 @@ function sendEmail(event) {
     // Coleta os dados do formulário
     var form = document.querySelector(".container-form");
 
+        // Verifica os dados do formulário antes de enviar
+        var formData = new FormData(form);
+        formData.forEach(function(value, key) {
+            console.log(key + ": " + value);  // Isso vai imprimir os dados no console
+        });
+    
     // Envia os dados do formulário para o EmailJS
     emailjs.sendForm("service_g5mcseq", "template_hk3h19k", form)
-        .then(function(response) {
-            alert("Mensagem enviada com sucesso!"); // Exibe uma mensagem de sucesso
-            console.log("Success:", response);
-        }, function(error) {
-            alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
-            console.log("Error:", error); // Exibe detalhes do erro
-            if (error.status) {
-                console.log("Status do erro:", error.status);
-            }
-            if (error.text) {
-                console.log("Texto do erro:", error.text);
-            }
-        });
+    .then(function(response) {
+        alert("Mensagem enviada com sucesso!"); // Exibe uma mensagem de sucesso
+        console.log("Success:", response);
+    }, function(error) {
+        alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+        console.log("Error:", error); // Exibe detalhes do erro
+        if (error.status) {
+            console.log("Status do erro:", error.status);
+        }
+        if (error.text) {
+            console.log("Texto do erro:", error.text);
+        }
+    });
 }
 
 // Agora, adicione o evento de envio
