@@ -139,19 +139,28 @@ document.addEventListener("click", function (event) {
 });
 
 // Função chamada quando o formulário é enviado
-document.querySelector(".container-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Impede o envio do formulário
+function sendEmail(event) {
+    event.preventDefault(); // Evita que o formulário seja enviado da forma tradicional
 
-    // Teste de envio de e-mail
-    emailjs.send("service_g5mcseq", "template_hk3h19k", {
-        "user_name": "Teste",
-        "user_email": "teste@teste.com",
-        "message": "Este é um teste!"
-    }).then(function(response) {
-        console.log("Success:", response);  // Se o envio for bem-sucedido
-        alert("Mensagem enviada com sucesso!");
-    }, function(error) {
-        console.error("Erro:", error);  // Se ocorrer algum erro
-        alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
-    });
-});
+    // Coleta os dados do formulário
+    var form = document.querySelector(".container-form");
+
+    // Envia os dados do formulário para o EmailJS
+    emailjs.sendForm("service_g5mcseq", "template_hk3h19k", form)
+        .then(function(response) {
+            alert("Mensagem enviada com sucesso!"); // Exibe uma mensagem de sucesso
+            console.log("Success:", response);
+        }, function(error) {
+            alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+            console.log("Error:", error); // Exibe detalhes do erro
+            if (error.status) {
+                console.log("Status do erro:", error.status);
+            }
+            if (error.text) {
+                console.log("Texto do erro:", error.text);
+            }
+        });
+}
+
+// Agora, adicione o evento de envio
+document.querySelector(".container-form").addEventListener("submit", sendEmail);
