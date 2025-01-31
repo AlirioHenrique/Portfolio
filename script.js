@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    type(); 
+    type(); // Inicia a digitação
 
     // Função para envio de email
     function sendEmail(event) {
