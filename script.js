@@ -152,7 +152,13 @@ function sendEmail(event) {
             console.log("Success:", response);
         }, function(error) {
             alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
-            console.log("Error:", error);
+            console.log("Error:", error); // Exibe detalhes do erro
+            if (error.status) {
+                console.log("Status do erro:", error.status);
+            }
+            if (error.text) {
+                console.log("Texto do erro:", error.text);
+            }
         });
 }
 
