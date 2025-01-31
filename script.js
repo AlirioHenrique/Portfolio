@@ -67,4 +67,26 @@ window.addEventListener('load', function() {
             linkToActivate.classList.add('active');
         }
     }
+
+       // Função chamada quando o formulário é enviado
+       function sendEmail(event) {
+        event.preventDefault(); // Evita que o formulário seja enviado da forma tradicional
+
+        // Coleta os dados do formulário
+        var form = document.querySelector(".container-form");
+
+        // Envia os dados do formulário para o EmailJS
+        emailjs.sendForm("service_g5mcseq", "template_hk3h19k", form)
+            .then(function(response) {
+                alert("Mensagem enviada com sucesso!"); // Exibe uma mensagem de sucesso
+                console.log("Success:", response);
+            }, function(error) {
+                alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+                console.log("Error:", error);
+            });
+    }
+
+    // Adiciona o evento de envio ao formulário
+    document.querySelector(".container-form").addEventListener("submit", sendEmail);
+    
 });
