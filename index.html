@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="transparent"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="transparent">
+    <title>Página com Navbar Fixada no Topo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav class="navbar custom-navbar navbar-expand-lg fixed-top">
+        <a class="nome-titulo" href="#">Alírio Henrique</a>
+        <button class="button-menu" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+            <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" stroke="#d1b68d" stroke-width="3">
+                  <line x1="0" y1="5" x2="25" y2="5"></line>
+                  <line x1="0" y1="15" x2="25" y2="15"></line>
+                  <line x1="0" y1="25" x2="25" y2="25"></line>
+                </g>
+              </svg>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projetos">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="text-white d-flex justify-content-center align-items-center">
+        <div class="boas-vindas">
+            <h1>Seja bem-vindo! Aqui compartilho um pouco da minha jornada...</h1>
+
+        </div>
+
+        <div class="img-home" >
+            <img src="img/foto-perfil-2.png" alt="perfil">
+        </div>
+        
+        <div class="txt-home">
+            <h3><span class="multiple-text"></span><span class="typed-cursor" aria-hidden="true">|</span></h3>
+            <p>Apaixonado por criar soluções tecnológicas inovadoras. Buscando novos desafios para aplicar minhas habilidades em desenvolvimento web e continuar meu aprendizado.</p>
+        </div>
+
+        <div class="container-Sociais">
+            <p>Conecte-se comigo nas redes sociais</p>
+            <a href="https://www.instagram.com/henriquealirio/" target="_blank">
+                <img class="social-logo" src="img/instagram.png" width="40" height="40" alt="Instagram"/>
+
+            </a>
+            <a href="https://www.linkedin.com/in/al%C3%ADrio-henrique-012057114/" target="_blank">
+                <img class="social-logo" src="img/Linkdin.png" width="40" height="40" alt="Linkdin"/>
+
+            </a>
+            <a href="https://github.com/AlirioHenrique" target="_blank">
+                <img class="social-logo" src="img/gitHub.png" width="40" height="40" alt="GitHub"/>
+
+            </a>
+        </div>
+    </section>
+
+    <section id="sobre" class="section-sobre">
+        <div class="txt-sobre "> 
+            <p>Minha trajetória é marcada por versatilidade e aprendizado constante. Trabalhei em diversas áreas, como vendas, estoque e como treinador de cavalos, meu hobby desde a infância. Passei um ano e meio em Portugal, onde aprofundei minha conexão com os cavalos e vivi experiências transformadoras.</p>
+            <p>Ao retornar ao Brasil, comecei a trabalhar como monitor de informática, enquanto conciliava meus estudos em programação e dedicava meu tempo livre ao treinamento de cavalos. Durante os treinos, percebi como a lógica de programação se manifestava nas atividades cotidianas: exercícios repetidos funcionavam como "loops", a avaliação de movimentos corretos como "ifs" e as recompensas como "breaks". Essa conexão prática despertou minha paixão pela tecnologia e consolidou meu interesse em seguir na área de programação.</p>
+            <p>Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na PUC Minas, onde participo de projetos práticos e aprofundo meus conhecimentos em tecnologias como C# .NET Core MVC, JavaScript, HTML, CSS e Banco de Dados SQL. No projeto acadêmico Cosmepédia, trabalhei em equipe no desenvolvimento de soluções completas, atuando tanto no front-end quanto no back-end e aplicando metodologias ágeis, como Scrum, para garantir entregas eficientes e colaborativas.</p>
+            <p>Busco uma oportunidade de estágio em desenvolvimento de software para crescer como desenvolvedor Full Stack. Sou curioso, dedicado e sempre disposto a aprender e contribuir com o sucesso dos projetos e da equipe.</p>
+        </div>
+        <img class="img-sobre" src="img/img-sobre.png" alt="foto-sobre">
+    </section>
+
+    <section id="projetos" class="section-projetos">
+        <div class="grid-container">
+            <div class="card card-cosmepedia-front">
+                <img class="img-cosmepedia-front" src="img/Logo-cosmepedia.png" alt="img-cosmepedia-front">
+                <div class="overlay">
+                    <h3>Desenvolvimento Front-end</h3>
+                    <p class="project-description">O projeto Cosmepédia foi desenvolvido com o objetivo de fornecer ao usuário uma plataforma fácil e rápida para pesquisar sobre a toxicidade de ingredientes presentes em cosméticos. Utilizando apenas HTML, CSS e JavaScript, o site permite que o usuário insira um ingrediente e descubra informações importantes sobre sua segurança. 
+                        <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t10-pmv-ads-2024-1-e1-proj-web-cosmepedia/codigo-fonte/index.html">Clique aqui</a> e pesquise algum ingrediente.
+                    </p>
+                </div>
+            </div>
+            <div class="card card-cosmepedia-back">
+                <img class="img-cosmepedia-back" src="img/logo-cosmepedia-back.png" alt="">
+                <div class="overlay">
+                    <h3>Desenvolvimento Back-end</h3>
+                    <p class="project-description">
+                        O Cosmepédia é um sistema desenvolvido em C# e ASP.NET Core MVC, permitindo aos usuários pesquisar sobre a toxicidade de ingredientes cosméticos, riscos à saúde e locais para descarte seguro. O sistema possui três tipos de usuários: Administrador, que tem controle total do sistema; Empresa, que pode cadastrar e atualizar pontos de descarte; e Usuário anônimo, que realiza pesquisas sem necessidade de cadastro. <a href="https://github-production-user-asset-6210df.s3.amazonaws.com/164577121/393541336-de5c56d6-dfe2-42da-a32f-26f8a888853a.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250121%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250121T132949Z&X-Amz-Expires=300&X-Amz-Signature=cf9be1a56457fe2b3faa88043abd4d08ba72dd54a6d0942fac1180799b885a10&X-Amz-SignedHeaders=host"> Clique aqui</a> e confira o vídeo de apresentação do projeto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section-contato">
+        <form class="container-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required />
+    
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto" required />
+    
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="5" required></textarea>
+    
+            <button id="button" type="submit">Enviar</button>
+        </form>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Inicialização do EmailJS com seu ID de usuário
+        emailjs.init("DoJPPspIwa7kvteTi");  // Substitua 'YOUR_USER_ID' pelo seu ID de usuário correto
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
