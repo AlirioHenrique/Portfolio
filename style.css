@@ -512,13 +512,24 @@ form button:hover {
         font-size: 1.4rem;
     }
     .container-Sociais {
-        max-width: 70%; 
+        max-width: 70dvh; 
     }
     .container-Sociais p {
      font-size: 0.8rem;
     }
     .social-logo {
         height: 2.5vh;  
+    }
+    @media only screen 
+        and (device-width: 414px) 
+        and (device-height: 896px) 
+        and (-webkit-device-pixel-ratio: 2) {
+        .container-Sociais {
+            max-width: 70%; 
+        }
+        .social-logo {
+            height: 2vh;
+        }
     }
 }
 @media (min-width:592px) {
