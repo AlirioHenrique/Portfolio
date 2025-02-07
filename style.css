@@ -518,7 +518,7 @@ form button:hover {
      font-size: 0.8rem;
     }
     .social-logo {
-        height: 2.5vh;  
+        height: 30px;  
     }
     @media only screen 
         and (device-width: 414px) 
