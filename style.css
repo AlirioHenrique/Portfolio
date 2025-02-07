@@ -512,13 +512,13 @@ form button:hover {
         font-size: 1.4rem;
     }
     .container-Sociais {
-        width: 65%; 
+        max-width: 70%; 
     }
     .container-Sociais p {
      font-size: 0.8rem;
     }
     .social-logo {
-        height: 3vh;  
+        height: 2.5vh;  
     }
 }
 @media (min-width:592px) {
