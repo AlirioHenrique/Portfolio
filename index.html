@@ -17,9 +17,9 @@
         <button class="button-menu" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
             <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" stroke="#d1b68d" stroke-width="3">
-                  <line x1="0" y1="5" x2="25" y2="5"></line>
-                  <line x1="0" y1="15" x2="25" y2="15"></line>
-                  <line x1="0" y1="25" x2="25" y2="25"></line>
+                  <line x1="0" y1="5" x2="45" y2="5"></line>
+                  <line x1="0" y1="15" x2="45" y2="15"></line>
+                  <line x1="0" y1="25" x2="45" y2="25"></line>
                 </g>
               </svg>
         </button>
@@ -41,23 +41,30 @@
         </div>
     </nav>
 
-    <section id="home" class="text-white d-flex justify-content-center align-items-center">
-        <div class="boas-vindas">
-            <h1>Seja bem-vindo! Aqui compartilho um pouco da minha jornada...</h1>
-
-        </div>
-
+    <section  class="section-home">
         <div class="img-home" >
             <img src="img/foto-perfil-2.png" alt="perfil">
         </div>
+        <div class="boas-vindas">
+            <pre class="pre-formatado">
+                User user = new User(
+                    name: "Alírio",
+                    age: 28,
+                    profession: new List<string> { "Future Full Stack Developer", "Horse Trainer" }
+                );
+            </pre>
+
+        </div>
+
+       
         
         <div class="txt-home">
             <h3><span class="multiple-text"></span><span class="typed-cursor" aria-hidden="true">|</span></h3>
-            <p>Apaixonado por criar soluções tecnológicas inovadoras. Buscando novos desafios para aplicar minhas habilidades em desenvolvimento web e continuar meu aprendizado.</p>
+            <p>Buscando novos desafios para aplicar minhas habilidades e continuar meu aprendizado.</p>
         </div>
 
         <div class="container-Sociais">
-            <p>Conecte-se comigo nas redes sociais</p>
+            <p>Conecte-se comigo <span>👉</span></p>
             <a href="https://www.instagram.com/henriquealirio/" target="_blank">
                 <img class="social-logo" src="img/instagram.png" width="40" height="40" alt="Instagram"/>
 
@@ -75,10 +82,11 @@
 
     <section id="sobre" class="section-sobre">
         <div class="txt-sobre "> 
-            <p>Minha trajetória é marcada por versatilidade e aprendizado constante. Trabalhei em diversas áreas, como vendas, estoque e como treinador de cavalos, meu hobby desde a infância. Passei um ano e meio em Portugal, onde aprofundei minha conexão com os cavalos e vivi experiências transformadoras.</p>
-            <p>Ao retornar ao Brasil, comecei a trabalhar como monitor de informática, enquanto conciliava meus estudos em programação e dedicava meu tempo livre ao treinamento de cavalos. Durante os treinos, percebi como a lógica de programação se manifestava nas atividades cotidianas: exercícios repetidos funcionavam como "loops", a avaliação de movimentos corretos como "ifs" e as recompensas como "breaks". Essa conexão prática despertou minha paixão pela tecnologia e consolidou meu interesse em seguir na área de programação.</p>
-            <p>Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na PUC Minas, onde participo de projetos práticos e aprofundo meus conhecimentos em tecnologias como C# .NET Core MVC, JavaScript, HTML, CSS e Banco de Dados SQL. No projeto acadêmico Cosmepédia, trabalhei em equipe no desenvolvimento de soluções completas, atuando tanto no front-end quanto no back-end e aplicando metodologias ágeis, como Scrum, para garantir entregas eficientes e colaborativas.</p>
-            <p>Busco uma oportunidade de estágio em desenvolvimento de software para crescer como desenvolvedor Full Stack. Sou curioso, dedicado e sempre disposto a aprender e contribuir com o sucesso dos projetos e da equipe.</p>
+            <p>Com uma trajetória diversificada, atuei em áreas como vendas, estoque, motoboy e treinamento de cavalos, minha paixão desde a infância.</p>
+            <p>Passei um ano e meio em Portugal, onde vivi uma experiência incrível que ampliou minha visão de mundo e fortaleceu qualidades como disciplina e paciência, essenciais tanto na vida quanto na tecnologia.</p>
+            <p>Retornando ao Brasil, comecei a trabalhar como monitor de informática e, ao estudar programação, passei a perceber a lógica por trás de diversas situações do meu dia a dia. Isso intensificou minha curiosidade pela tecnologia e me motivou a buscar a PUC Minas, onde encontrei o suporte necessário para trilhar meu caminho profissional no universo tecnológico.</p>
+            <p>Atualmente, curso Análise e Desenvolvimento de Sistemas,trabalho com C# .NET Core MVC, JavaScript, HTML, CSS e SQL. No projeto Cosmepédia, atuei no front-end e back-end, aplicando Scrum para entregas ágeis. Trabalhamos também com Git, GitHub e Figma para colaboração e versionamento de código.</p>
+            <p>Busco uma oportunidade de estágio em desenvolvimento de software para crescer como Full Stack Developer, sempre disposto a aprender e contribuir.</p>
         </div>
         <img class="img-sobre" src="img/img-sobre.png" alt="foto-sobre">
     </section>
