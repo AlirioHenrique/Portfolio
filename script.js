@@ -35,13 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     const form = document.querySelector('.container-form'); 
-    const btn = document.querySelector('button'); 
+    const btn = document.querySelector('#button'); 
     // Adiciona o evento de envio
     form.addEventListener('submit', function(event) {
     event.preventDefault(); 
     
     console.log('Formulário enviado'); 
-    
+    btn.textContent = 'Enviando...';
     
     const serviceID = 'default_service';
     const templateID = 'template_hk3h19k';
