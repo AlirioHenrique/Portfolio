@@ -41,37 +41,33 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault(); 
     
     console.log('Formulário enviado'); 
-    btn.textContent = 'Enviando...'; 
+    
     
     const serviceID = 'default_service';
     const templateID = 'template_hk3h19k';
 
     // Envia o formulário via EmailJS
     emailjs.sendForm(serviceID, templateID, form)
-    .then(function(response) {
-        // Exibe a resposta do EmailJS no console
-        console.log('Resposta do EmailJS:', response);
+        .then(function(response) {
+            console.log('Resposta do EmailJS:', response); 
+            alert('Mensagem enviada com sucesso!'); 
+        }, function(error) {
+            console.log('Erro no envio:', error); 
+            alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
+            if (error.status) {
+                console.log('Status do erro:', error.status); 
+            }
+            if (error.text) {
+                console.log('Texto do erro:', error.text); 
+            }
+        });
         form.reset();
-        
-        // Exibe o alerta de sucesso (Mensagem enviada)
-        alert('Mensagem enviada com sucesso!');
-        
-        // Não altere o texto do botão, ele permanece com "Send Email"
-    }, function(error) {
-        // Exibe o erro no console, caso haja
-        console.log('Erro no envio:', error);
-        
-        // Exibe o alerta de erro
-        alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
-        
-        // Exibe o status e texto do erro no console, se existirem
-        if (error.status) {
-            console.log('Status do erro:', error.status);
-        }
-        if (error.text) {
-            console.log('Texto do erro:', error.text);
-        }
-    });
+    }); 
+
+    
+
+  
+
     // Ativação de links no menu
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
