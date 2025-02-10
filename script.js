@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     event.preventDefault(); 
     
     console.log('Formulário enviado'); 
-    btn.textContent = 'Sending...'; 
+    btn.textContent = 'Enviando...'; 
     
     const serviceID = 'default_service';
     const templateID = 'template_hk3h19k';
@@ -77,6 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
             localStorage.setItem('activeLink', this.getAttribute('href'));
         });
+    });
+    document.querySelector('.nome-titulo').addEventListener('click', function () {
+        navLinks.forEach(link => link.classList.remove('active'));
+        document.querySelector('.nav-link[href="#home"]').classList.add('active');
+        localStorage.setItem('activeLink', '#home');
     });
 
     // Verifica se há um link ativo salvo no localStorage

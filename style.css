@@ -17,7 +17,6 @@ section {
     min-height: 100vh; 
 }
 
-
 .navbar-nav {
     display: flex;
     flex-direction: row;
@@ -214,8 +213,8 @@ section {
 }
 
 .social-logo {
-    width: 100%; 
-    height: 4vh;  
+    width: auto; 
+    height: 40px;  
     transition: transform 0.3s ease; 
     background-color: #d1b68d;
     border-radius: 70%;
@@ -273,7 +272,7 @@ section {
     gap: 20%; 
     justify-items: center; 
     width: 100%;
-    max-width: 1200px; 
+    max-width: 800px; 
 }
 .card-cosmepedia-front {
     background-color: #072847;
@@ -294,7 +293,6 @@ section {
 .img-cosmepedia-back{
     width: 100%;
     height: 100%; 
-    border-radius: 30%; 
     object-fit: contain; 
 }
 .card:hover {
@@ -308,7 +306,7 @@ section {
     color: white;
     opacity: 0;
     transition: opacity 0.3s ease;
-    padding: 1rem;
+    padding: 0.5rem;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -320,12 +318,12 @@ section {
     opacity: 1;
 }
 .overlay h3 {
-    margin: 0 0 1rem 0; 
+    margin: 0 0 0.2rem 0; 
     font-size: 1.25rem; 
     font-weight: bold;
 }
 .project-description {
-    font-size: 1rem;
+    font-size: 0.75rem;
     text-align: justify;
     margin: 0;
     max-width: 100%;
@@ -380,6 +378,9 @@ form button {
 form button:hover {
     background-color: #0056b3; 
 }
+
+/* responsividade*/
+
 @media (max-width:320px){
     .custom-navbar .navbar-nav .nav-item .nav-link {
         font-size: 0.7rem;
@@ -424,8 +425,46 @@ form button:hover {
      font-size: 0.6rem;
     }
     .social-logo {
-        height: 4vh;  
+        height: 20px;  
     }
+    .section-sobre {
+        flex-direction: column;
+        text-align: justify; 
+    }
+    .txt-sobre {
+        padding-top: 20%;
+        padding-left: 5%; 
+        max-width: 95vw; 
+        font-size: 0.5rem; 
+        line-height: 1.5;   
+    }
+    .section-sobre img {
+        align-self: center;
+        position: relative;
+        top: -30px;
+    }
+    .overlay h3 {
+        font-size: 0.8rem; 
+    }
+    .project-description {
+        font-size: 0.6rem;
+
+    }
+    .section-contato {
+        background-color: #3d4044; 
+        color: white; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh;
+    }
+    form {
+        margin-top: 10%;
+        gap: 1ch; 
+        width: 80%; 
+        height: 80vh;
+    }
+
 }
 @media (min-width:321px) {
     .custom-navbar .navbar-nav .nav-item .nav-link {
@@ -471,13 +510,35 @@ form button:hover {
      font-size: 0.7rem;
     }
     .social-logo {
-        height: 3vh;  
+        height: 20px;  
+    }
+    .section-sobre {
+        flex-direction: column;
+        text-align: justify; 
+    }
+    .txt-sobre {
+        padding-top: 25%;
+        padding-left: 5%; 
+        max-width: 95vw; 
+        font-size: 0.6rem; 
+        line-height: 1.5;   
+    }
+    .section-sobre img {
+        width: 200px;
+        align-self: center;
+        position: relative;
+        top: -40px;
+    }
+    form {
+        gap: 1ch; 
+        width: 80%; 
+        height: 70vh;
     }
 }
-@media (min-width:392px) {
+@media (min-width:393px) {
     .custom-navbar .navbar-nav .nav-item .nav-link {
         font-size: 0.8rem;
-        margin-top: -10px;
+        margin-top: -20px;
     }
     .nome-titulo {
         left: 5%;
@@ -522,7 +583,25 @@ form button:hover {
         width: auto; 
         max-height: 25px; 
     }
-    
+    .section-sobre {
+        flex-direction: column;
+        text-align: justify; 
+    }
+    .txt-sobre {
+        padding-top: 20%;
+        padding-left: 5%; 
+        max-width: 95vw; 
+        font-size: 0.7rem; 
+        line-height: 1.5;   
+    }
+    .section-sobre img {
+        align-self: center;
+        position: relative;
+        top: -50px;
+    }
+    form {
+        height: 60vh;
+    }
 }
 @media (min-width:592px) {
     .custom-navbar .navbar-nav .nav-item .nav-link {
@@ -568,7 +647,7 @@ form button:hover {
      font-size: 0.8rem;
     }
     .social-logo {
-        height: 3vh;  
+        height: 30px;  
     }
 }
 @media (min-width:692px) {
@@ -605,8 +684,9 @@ form button:hover {
         font-size: 0.8rem;
     }
     .social-logo {
-        height: 3vh;  
+        height: 30px;  
     }
+
 }
 @media (min-width:792px) {
     .button-menu{
@@ -642,21 +722,75 @@ form button:hover {
         font-size: 0.8rem;
     }
     .social-logo {
-        height: 3vh;  
+        height: 30px;  
+    }
+    .section-sobre{
+        flex-direction: row;
+    }
+    .txt-sobre {
+        font-size: 1rem; 
+        padding-top: 10%;
+        padding-left: 5%; 
+        max-width: 65vw; 
+        line-height: 1.6;
+        color:#f2e8c6;
+        font-family: 'Poppins', sans-serif;
+    }
+    .section-sobre img {
+        width: 30vw; 
+        height: auto; 
+        object-fit: cover; 
+    }
+    .img-sobre{
+        padding-right: 10px;
+    }
+    form {
+        height: 50vh;
+        width: 60%; 
     }
 }
 @media (min-width: 992px) {
     .button-menu{
         display: none;
     }
+    .custom-navbar .navbar-nav .nav-item .nav-link {
+        font-size: 1rem;
+    }
     .boas-vindas{
         left: 50%;
         font-size: 1.2rem;
     } 
+    .social-logo{
+        height: 30px;
+    }
+    .section-sobre{
+        flex-direction: row;
+    }
+    .txt-sobre {
+        font-size: 1rem; 
+        padding-top: 10%;
+        padding-left: 5%; 
+        max-width: 65vw; 
+        line-height: 1.6;
+        color:#f2e8c6;
+        font-family: 'Poppins', sans-serif;
+    }
+    .section-sobre img {
+        width: 30vw; 
+        height: auto; 
+        object-fit: cover; 
+    }
+    .img-sobre{
+        padding-right: 10px;
+    }
+    form {
+        height: 60vh;
+        width: 40%; 
+    }
 }
 @media(min-width:1280px)  {
     .custom-navbar .navbar-nav .nav-item .nav-link {
-        font-size: 1.3rem; 
+        font-size: 1rem;
     }
     .boas-vindas {
         width: 40%; 
@@ -669,12 +803,32 @@ form button:hover {
         width: 35%; 
     }
     .social-logo {
-        height: 4vh;  
+        height: 40px;  
     }
     .container-Sociais p {
         font-size: 1rem; 
         display: inline-flex; 
         align-items: center;
+    }
+    .section-sobre{
+        flex-direction: row;
+    }
+    .txt-sobre {
+        font-size: 1rem; 
+        padding-top: 10%;
+        padding-left: 5%; 
+        max-width: 65vw; 
+        line-height: 1.6;
+        color:#f2e8c6;
+        font-family: 'Poppins', sans-serif;
+    }
+    .section-sobre img {
+        width: 30vw; 
+        height: auto; 
+        object-fit: cover; 
+    }
+    .img-sobre{
+        padding-right: 10px;
     }
 }
 @media(min-width:1580px)  {
@@ -694,7 +848,7 @@ form button:hover {
         width: 30%; 
     }
     .social-logo {
-        height: 4vh;  
+        height: 40px;  
     }
     .container-Sociais p {
         font-size: 1rem; 
@@ -703,4 +857,45 @@ form button:hover {
     }
 
 }   
- 
+
+
+/*modo retrato*/
+@media (min-width: 480px) and (max-height: 480px) {
+    .nome-titulo{
+        font-size: 1.5rem;
+    }
+    .navbar-nav {
+        position: absolute;
+        flex-direction: column; 
+        align-items: flex-end;
+        gap: 18px; 
+        right: 15px;   
+    }
+    .custom-navbar .navbar-nav .nav-item .nav-link {
+        font-size: 0.7rem;
+        margin-top: -35px;
+    }
+    .img-home {
+        height: 45%;
+        position: absolute;
+        top: -6%;
+    }
+
+    .boas-vindas{
+        font-size: 0.7rem;
+        width: 98%;
+    }
+    .multiple-text{
+        font-size: 0.8rem;
+    }
+    .txt-home{
+        font-size: 0.6rem;
+    }
+    .container-Sociais{
+        width: 50vw;
+    }
+    .container-Sociais p{
+        font-size: 0.6rem;
+    }
+
+}
