@@ -47,6 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const templateID = 'template_hk3h19k';
 
     // Envia o formulário via EmailJS
+    const loadingMessage = document.querySelector('.loading'); // supondo que você tenha um elemento com a classe 'loading'
+
+    // Antes de enviar, mostre o carregamento
+    loadingMessage.style.display = 'block';
+
     emailjs.sendForm(serviceID, templateID, form)
         .then(function(response) {
             console.log('Resposta do EmailJS:', response); 
