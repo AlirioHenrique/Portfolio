@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(function(response) {
             console.log('Resposta do EmailJS:', response); 
             alert('Mensagem enviada com sucesso!'); 
+            btn.textContent = 'Enviar';
 
         }, function(error) {
             console.log('Erro no envio:', error); 
@@ -63,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         form.reset();
-        btn.textContent = 'Enviar';
+       
     }); 
 
     
