@@ -106,10 +106,11 @@ document.addEventListener("click", function (event) {
         menuContent.classList.remove("show"); 
         buttonMenu.blur(); 
     }
-    if (!Array.from(links).some(link => link.contains(event.target))) {
-        buttonMenu.blur(); 
+    if (!Array.from(links).some(link => link.contains(event.target)) && !menuContent.contains(event.target)) {
+        buttonMenu.blur();
     }
 });
+
 
 
 const img = document.querySelector('.img-sobre'); 
