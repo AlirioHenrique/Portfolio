@@ -68,27 +68,37 @@ emailjs.sendForm(serviceID, templateID, form)
 }); 
 
 
-
-
+const navLinks = document.querySelectorAll('.nav-link');
+let activeLink = localStorage.getItem('activeLink') || ''; // Mantém o link ativo
 
 // Ativação de links no menu
-const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', function() {
-        navLinks.forEach(link => link.classList.remove('active'));
-        this.classList.add('active');
-        localStorage.setItem('activeLink', this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        
+        if (href !== activeLink) {
+            navLinks.forEach(link => link.classList.remove('active')); 
+            this.classList.add('active'); 
+            activeLink = href;
+            localStorage.setItem('activeLink', href); 
+        }
     });
 });
+
+// Ativa o link "home" ao clicar no nome do título
 document.querySelector('.nome-titulo').addEventListener('click', function () {
-    navLinks.forEach(link => link.classList.remove('active'));
-    document.querySelector('.nav-link[href="#home"]').classList.add('active');
-    localStorage.setItem('activeLink', '#home');
+    const homeLink = document.querySelector('.nav-link[href="#home"]');
+    
+    if (activeLink !== '#home') {
+        navLinks.forEach(link => link.classList.remove('active'));
+        homeLink.classList.add('active');
+        activeLink = '#home';
+        localStorage.setItem('activeLink', '#home');
+    }
 });
 
-// Verifica se há um link ativo salvo no localStorage
+// Verifica o link ativo ao carregar a página
 window.addEventListener('load', function() {
-    const activeLink = localStorage.getItem('activeLink');
     if (activeLink) {
         const linkToActivate = document.querySelector(`a[href="${activeLink}"]`);
         if (linkToActivate) {
@@ -98,20 +108,15 @@ window.addEventListener('load', function() {
 });
 
 // Fecha o menu de navegação quando clicado fora dele
-document.addEventListener("click", function (event) {
+document.addEventListener("click", function(event) {
     const buttonMenu = document.querySelector(".button-menu");
     const menuContent = document.querySelector("#navbarNav");
-    const links = document.querySelectorAll('a');  // Defina os links corretamente aqui
+
     if (!buttonMenu.contains(event.target) && !menuContent.contains(event.target)) {
-        menuContent.classList.remove("show"); 
-        buttonMenu.blur(); 
-    }
-    if (!Array.from(links).some(link => link.contains(event.target)) && !menuContent.contains(event.target)) {
+        menuContent.classList.remove("show");
         buttonMenu.blur();
     }
 });
-
-
 
 const img = document.querySelector('.img-sobre'); 
 
