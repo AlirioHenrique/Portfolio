@@ -67,56 +67,43 @@ emailjs.sendForm(serviceID, templateID, form)
     
 }); 
 
-
-const navLinks = document.querySelectorAll('.nav-link');
-let activeLink = localStorage.getItem('activeLink') || ''; // Mantém o link ativo
-
-// Ativação de links no menu
-navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        const href = this.getAttribute('href');
-        
-        if (href !== activeLink) {
-            navLinks.forEach(link => link.classList.remove('active')); 
-            this.classList.add('active'); 
-            activeLink = href;
-            localStorage.setItem('activeLink', href); 
-        }
-    });
-});
-
-// Ativa o link "home" ao clicar no nome do título
+// Função para ativar o link "Home" quando o nome-titulo for clicado
 document.querySelector('.nome-titulo').addEventListener('click', function () {
     const homeLink = document.querySelector('.nav-link[href="#home"]');
-    
-    if (activeLink !== '#home') {
+    const allLinks = document.querySelectorAll('.nav-link');
+    allLinks.forEach(link => link.classList.remove('active'));
+
+    homeLink.classList.add('active');
+});
+
+// Função para ativar o link clicado
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
         navLinks.forEach(link => link.classList.remove('active'));
-        homeLink.classList.add('active');
-        activeLink = '#home';
-        localStorage.setItem('activeLink', '#home');
+        this.classList.add('active');
+    });
+});
+// Seleciona o botão de menu e os links de navegação
+const buttonMenu = document.querySelector('.button-menu');
+const navBar = document.querySelector('.nav-bar');
+
+document.querySelector('.button-menu').addEventListener('click', function () {
+    // Alterna a classe 'show' nos links
+    const navBar = document.querySelector('.nav-bar');
+    navBar.classList.toggle('show');
+});
+//fechar dropdown
+document.addEventListener('click', function (event) {
+    const navBar = document.querySelector('.nav-bar');
+    const buttonMenu = document.querySelector('.button-menu');
+
+    // Verifica se o clique foi fora do botão e do menu de navegação
+    if (!navBar.contains(event.target) && !buttonMenu.contains(event.target)) {
+        navBar.classList.remove('show'); // Esconde o dropdown
     }
 });
 
-// Verifica o link ativo ao carregar a página
-window.addEventListener('load', function() {
-    if (activeLink) {
-        const linkToActivate = document.querySelector(`a[href="${activeLink}"]`);
-        if (linkToActivate) {
-            linkToActivate.classList.add('active');
-        }
-    }
-});
-
-// Fecha o menu de navegação quando clicado fora dele
-document.addEventListener("click", function(event) {
-    const buttonMenu = document.querySelector(".button-menu");
-    const menuContent = document.querySelector("#navbarNav");
-
-    if (!buttonMenu.contains(event.target) && !menuContent.contains(event.target)) {
-        menuContent.classList.remove("show");
-        buttonMenu.blur();
-    }
-});
 
 const img = document.querySelector('.img-sobre'); 
 
