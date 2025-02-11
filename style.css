@@ -36,7 +36,7 @@ section {
     font-size: 1.4rem;
     color: #f4e6cc;
     text-align: center;
-}
+} 
 
 .custom-navbar .navbar-nav .nav-item .nav-link:active,
 .custom-navbar .navbar-nav .nav-item .nav-link:focus,
@@ -52,14 +52,14 @@ section {
 }
 
 .custom-navbar .navbar-nav .nav-item.dropdown .dropdown-menu {
-    visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.2s ease;
+    pointer-events: none; /* Desativa a interação quando não visível */
 }
 
 .custom-navbar .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-    visibility: visible;
     opacity: 1;
+    pointer-events: auto; /* Habilita interação quando visível */
 }
 
 .custom-navbar .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
