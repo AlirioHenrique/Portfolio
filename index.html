@@ -14,25 +14,53 @@
 <body>
     <nav class="barra-navegacao">
         <a class="nome-titulo" href="#">Alírio Henrique</a>
+        
         <div class="nav-bar">
             <a class="nav-link" href="#home">Home</a>
             <a class="nav-link" href="#sobre">Sobre</a>
             <a class="nav-link" href="#projetos">Projetos</a>
             <a class="nav-link" href="#contato">Contato</a>
         </div>
-        <button class="button-menu" type="button">
-            <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <button  class="button-menu" type="button">
+            <svg id="menu-claro" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" stroke="#d1b68d" stroke-width="3">
                     <line x1="0" y1="5" x2="45" y2="5"></line>
                     <line x1="0" y1="15" x2="45" y2="15"></line>
                     <line x1="0" y1="25" x2="45" y2="25"></line>
                 </g>
             </svg>
+            <svg id="menu-escuro" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" stroke="#2c202c" stroke-width="3">
+                    <line x1="0" y1="5" x2="45" y2="5"></line>
+                    <line x1="0" y1="15" x2="45" y2="15"></line>
+                    <line x1="0" y1="25" x2="45" y2="25"></line>
+                </g>
+            </svg>
+
+        </button>
+        <button id="alterar-tema">
+            <svg id="icone-lua" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2c202c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"/>
+            </svg>
+            
+            <svg id="icone-sol" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f4e6cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <circle cx="12" cy="12" r="5"/>  <!-- Círculo do sol -->
+                <line x1="12" y1="1" x2="12" y2="3"/>  <!-- Raios do sol -->
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            
         </button>
     </nav>
     <section id="home" class="section-home">
         <div class="img-home" >
-            <img src="img/foto-perfil-2.png" alt="perfil">
+            <img id="foto-clara" src="img/foto-perfil-2.png" alt="perfil">
+            <img id="foto-escura" src="img/foto-perfil-escuro.png" alt="perfil">
         </div>
         <div class="boas-vindas">
             <pre class="pre-formatado">
@@ -53,7 +81,7 @@
         </div>
 
         <div class="container-Sociais">
-            <p>Conecte-se comigo <span>👉</span></p>
+            <p>Conecte-se comigo</p>
             <a href="https://www.instagram.com/henriquealirio/" target="_blank">
                 <img class="social-logo" src="img/instagram.png" width="40" height="40" alt="Instagram"/>
 

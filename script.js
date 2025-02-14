@@ -103,15 +103,66 @@ document.addEventListener('click', function (event) {
         navBar.classList.remove('show'); // Esconde o dropdown
     }
 });
+//alterar para modo claro
+window.addEventListener('DOMContentLoaded', function () {
+    const modoClaro = localStorage.getItem('modo-claro'); 
+    const iconeLua = document.getElementById("icone-lua");
+    const iconeSol = document.getElementById("icone-sol");
+    const menuClaro=document.getElementById("menu-claro");
+    const menuEscuro=document.getElementById("menu-escuro");
+    const fotoClara=document.getElementById("foto-clara");
+    const fotoEscura=document.getElementById("foto-escura");
 
-
-const img = document.querySelector('.img-sobre'); 
-
-img.addEventListener('click', function() {
-    img.classList.toggle('zoom'); 
-});
-document.addEventListener('click', function(event) {
-    if (!img.contains(event.target)) {
-        img.classList.remove('zoom'); 
+    if (modoClaro === 'true') {
+        document.body.classList.add("modo-claro");
+        iconeLua.style.display = "inline";
+        iconeSol.style.display = "none";
+        menuClaro.style.display= "none";
+        menuEscuro.style.display= "inline";
+        fotoClara.style.display="inline";
+        fotoEscura.style.display="none";
+    } else {
+        document.body.classList.remove("modo-claro");
+        iconeLua.style.display = "none";
+        iconeSol.style.display = "inline";
+        menuClaro.style.display= "inline";
+        menuEscuro.style.display= "none";
+        fotoClara.style.display="none";
+        fotoEscura.style.display="inline";
     }
 });
+
+// Evento para alternar entre os temas ao clicar no botão
+document.getElementById("alterar-tema").addEventListener("click", function () {
+    document.body.classList.toggle("modo-claro");
+
+    // Verifica se o modo claro está ativado
+    const modoAtivo = document.body.classList.contains("modo-claro");
+    const iconeLua = document.getElementById("icone-lua");
+    const iconeSol = document.getElementById("icone-sol");
+    const menuClaro=document.getElementById("menu-claro");
+    const menuEscuro=document.getElementById("menu-escuro");
+    const fotoClara=document.getElementById("foto-clara");
+    const fotoEscura=document.getElementById("foto-escura");
+    
+
+    if (modoAtivo) {
+        iconeLua.style.display = "inline";
+        iconeSol.style.display = "none";
+        menuClaro.style.display= "none";
+        menuEscuro.style.display= "inline";
+        fotoClara.style.display="inline";
+        fotoEscura.style.display="none";
+        localStorage.setItem('modo-claro', 'true'); 
+
+    } else {
+        iconeLua.style.display = "none";
+        iconeSol.style.display = "inline";
+        menuClaro.style.display= "inline";
+        menuEscuro.style.display= "none";
+        fotoClara.style.display="none";
+        fotoEscura.style.display="inline";
+        localStorage.setItem('modo-claro', 'false'); 
+    }
+});
+
