@@ -473,7 +473,7 @@ form button:hover {
         font-size: 0.8rem; 
     }
     .project-description {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
     }
     .section-contato {
         display: flex; 
@@ -529,21 +529,37 @@ form button:hover {
         padding-top: 25%;
         font-size: 0.6rem; 
     }
+    .overlay h3 {
+        font-size: 1rem; 
+    }
     .section-sobre img {
         width: 250px;
         align-self: center;
         position: relative;
         top: -40px;
     }
+    .project-description{
+        font-size: 0.7rem;
+    }
     form {
         gap: 1ch; 
         width: 80%; 
         height: 70vh;
     }
+
 }
 @media (min-width:393px) {
     .button-menu{
         top: 20px;
+    }
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+    .nome-titulo {
+        font-size: 1.5rem; 
+        padding-left: 4rem;
+        padding-bottom: 1rem;
     }
     .boas-vindas {
         width: 90%; 
@@ -579,11 +595,26 @@ form button:hover {
     .section-sobre img {
         top: -50px;
     }
+    .project-description{
+        font-size: 0.8rem;
+    }
     form {
         height: 60vh;
     }
 }
-
+@media (min-width:492px) {
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+    .nome-titulo{
+        font-size: 1.8rem;
+        padding-bottom: 2rem;
+    }
+    .txt-sobre {
+        font-size: 1.1rem; 
+    }
+}
 @media (min-width:592px) {
     #alterar-tema{
         top: 15%;
@@ -610,6 +641,9 @@ form button:hover {
         left: 5%; 
         width: 80%; 
         font-size: 1rem; 
+    }
+    .txt-sobre {
+        font-size: 1.1rem; 
     }
     .multiple-text {
         font-size: 1.4rem;
@@ -639,9 +673,10 @@ form button:hover {
     }
     .nome-titulo {
         font-size: 2rem; 
+        padding-bottom: 1rem;   
     }  
     .nav-link {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
     .boas-vindas {
         width: 90%; 
@@ -677,8 +712,8 @@ form button:hover {
         flex-direction: row;
     }
     .txt-sobre {
-        font-size: 1rem; 
-        padding-top: 10%;
+        font-size: 1.1rem; 
+        padding-top: 15%;
         max-width: 65vw; 
     }
     .section-sobre img {
