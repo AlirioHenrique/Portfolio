@@ -272,7 +272,7 @@ section {
     gap: 20%; 
     justify-items: center; 
     width: 100%;
-    max-width: 300px; 
+    max-width: 400px; 
 }
 .card-cosmepedia-front {
     background-color: #072847;
@@ -574,7 +574,7 @@ form button:hover {
         padding-top: 20%;
         padding-left: 5%; 
         max-width: 95vw; 
-        font-size: 0.7rem; 
+        font-size: 0.75rem; 
     }
     .section-sobre img {
         top: -50px;
@@ -622,6 +622,12 @@ form button:hover {
     }
     .social-logo {
         height: 30px;  
+    }
+    .overlay h3 {
+        font-size: 1.5rem; 
+    }
+    .project-description {
+        font-size: 0.9rem;
     }
 }
 @media (min-width:692px) {
